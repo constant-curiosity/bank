@@ -33,15 +33,18 @@ app.use(
   session({
     secret: process.env.SECRET,
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: true, //false
+    proxy: true, //didn't have 
+    name: "community-bank", //didn't have 
     store: mongoStore.create({
       mongoUrl: process.env.DB_STRING,
       collection: "sessions",
     }),
     cookie: {
-      secure: true,
-      httpOnly: false,
-      sameSite: "none",
+      httpOnly: true, //false
+      secure: true, //didn't have 
+      maxAge: 1000 * 60 * 60 * 48,
+      sameSite: "none", //didn't have 
     },
   })
 );
