@@ -18,7 +18,7 @@ const bannerRotate = () => {
     if (imageNum === imageContainer.length) {
       imageNum = 0;
     }
-    $("banner").innerHTML = `<img src="${imageContainer[imageNum]}">`;
+    $("banner").innerHTML = `<img class="img-fluid" src="${imageContainer[imageNum]}">`;
     setTimeout(innerRotate, 2000);
   });
 };
