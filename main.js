@@ -14,6 +14,21 @@ app.use(express.static("client"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+// app.use(
+//   session({
+//     secret: process.env.SECRET,
+//     resave: false,
+//     saveUninitialized: false,
+//     store: mongoStore.create({
+//       mongoUrl: process.env.DB_STRING,
+//       collection: "sessions",
+//     }),
+//     cookie: {
+//        maxAge: 60 * 60 * 1000,
+//     },
+//   })
+// );
+
 app.use(
   session({
     secret: process.env.SECRET,
@@ -24,7 +39,9 @@ app.use(
       collection: "sessions",
     }),
     cookie: {
-       maxAge: 60 * 60 * 1000,  
+      secure: true,
+      httpOnly: false,
+      sameSite: "none",
     },
   })
 );
@@ -32,7 +49,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.set("port", process.env.PORT);
+app.set("port", process.env.PORT || 5000);
 
 app.use("/", router);
 
