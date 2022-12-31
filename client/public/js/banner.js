@@ -23,4 +23,15 @@ const bannerRotate = () => {
   });
 };
 
+const hamburgerMenu = () => {
+  const dropDownNav = $("dropDownNav");
+  if (dropDownNav.style.display === "block") {
+    dropDownNav.style.display = "none";
+  } else {
+    dropDownNav.style.display = "block";
+  }
+}
+
+
 window.onload = bannerRotate();
+
