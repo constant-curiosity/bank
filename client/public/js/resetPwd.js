@@ -46,6 +46,15 @@ const comparesPwd = () => {
   }
 };
 
+const hamburgerMenu = () => {
+  const dropDownNav = $("dropDownNav");
+  if (dropDownNav.style.display === "block") {
+    dropDownNav.style.display = "none";
+  } else {
+    dropDownNav.style.display = "block";
+  }
+};
+
 window.onload = () => {
   "Use Strict";
   $("update_btn").onclick = verifyEmail;

@@ -7,23 +7,46 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="../public/styles.css">
       <title>Login</title>
    </head>
    <body>
-      <div id="header_navbar">
-         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 bg-light border-bottom">
-            <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-               <svg class="bi me-2" width="40" height="32"></svg>
-               <span class="fs-2">Titan Community Bank</span>
-            </a>
-            <ul class="nav nav-pills">
-               <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-               <li class="nav-item"><a href="login.html" class="nav-link active" aria-current="page">Login</a></li>
-               <li class="nav-item"><a href="registration.html" class="nav-link">Register</a></li>
-               <li class="nav-item"><a href="finance.html" class="nav-link">Financing</a></li>
-            </ul>
-         </header>
+  <!--Desk Top Nav-->
+<div id="header_navbar">
+   <header class="d-flex flex-wrap justify-content-center py-3 mb-4 bg-light border-bottom">
+      <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+         <svg class="bi me-2" width="40" height="32"></svg>
+         <span class="fs-2">Titan Community Bank</span>
+      </a>
+      <ul class="nav nav-pills">
+         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+         <li class="nav-item"><a href="login.html" class="nav-link active" aria-current="page">Login</a></li>
+         <li class="nav-item"><a href="registration.html" class="nav-link">Register</a></li>
+         <li class="nav-item"><a href="finance.html" class="nav-link">Financing</a></li>
+      </ul>
+   </header>
+</div>
+<!-- Mobile /Tablet Nav -->
+<div id="block">
+   <div class="topnav">
+      <a id="title" href="index.html" class="fs-5">Titan Community Bank</a>
+      <div id="dropDownNav">
+         <a href="index.html" class="nav-link" aria-current="page">Home</a>
+         <hr>
+         <a href="login.html" class="nav-link">Login</a>
+         <hr>
+         <a href="registration.html" class="nav-link">Register</a>
+         <hr>
+         <a href="finance.html" class="nav-link">Financing</a>
+         <hr>
       </div>
+      <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+      <a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
+      <i class="fa fa-bars"></i>
+      </a>
+   </div>
+</div>
       <main>
          <form id="login_form" class="container-fluid" action="login.html" method="post" name="login_form">
             <div id="login" class="container py-5 h-100">
@@ -44,7 +67,7 @@
                            </div>
                            <button id="login_Btn" class="btn btn-primary" type="button">Login</button>
                            &nbsp;&nbsp;
-                           <a id="reset_Btn" href="https://community-bank.herokuapp.com/resetPwd.html" class="btn btn-primary">Reset</a>
+                           <a id="reset_Btn" href="http://localhost:3000/resetPwd.html" class="btn btn-primary">Reset</a>
                            <hr class="my-4">
                         </div>
                      </div>

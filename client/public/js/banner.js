@@ -34,4 +34,3 @@ const hamburgerMenu = () => {
 
 
 window.onload = bannerRotate();
-

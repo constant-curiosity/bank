@@ -46,6 +46,15 @@ const validateLogin = () => {
   }
 };
 
+const hamburgerMenu = () => {
+  const dropDownNav = $("dropDownNav");
+  if (dropDownNav.style.display === "block") {
+    dropDownNav.style.display = "none";
+  } else {
+    dropDownNav.style.display = "block";
+  }
+};
+
 window.onload = () => {
   $("login_Btn").onclick = validateLogin;
   $("login_Email").focus();

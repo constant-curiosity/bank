@@ -76,6 +76,15 @@ const conversion = () => {
   drawGraph(spendingStr, spendingRounded);
 };
 
+const hamburgerMenu = () => {
+  const dropDownNav = $("dropDownNav");
+  if (dropDownNav.style.display === "block") {
+    dropDownNav.style.display = "none";
+  } else {
+    dropDownNav.style.display = "block";
+  }
+};
+
 window.onload = () => {
   "Use Strict";
   conversion(monthlySpending);

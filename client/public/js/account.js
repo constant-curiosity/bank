@@ -34,6 +34,15 @@ const calulateBalance = (transactions) => {
   $("displayBalance").innerHTML = `<b>Balance: $${balance.toFixed(2)}</b>`;
 };
 
+const hamburgerMenu = () => {
+  const dropDownNav = $("dropDownNav");
+  if (dropDownNav.style.display === "block") {
+    dropDownNav.style.display = "none";
+  } else {
+    dropDownNav.style.display = "block";
+  }
+};
+
 window.onload = () => {
   "Use Strict";
   const fetchTransactions = fetch(
