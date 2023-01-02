@@ -2,140 +2,141 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="../public/styles.css">
-        <title>Financing</title>
-    </head>
-    <body>
-<!--Desk Top Nav-->
-<div id="header_navbar">
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 bg-light border-bottom">
-       <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-          <svg class="bi me-2" width="40" height="32"></svg>
-          <span class="fs-2">Titan Community Bank</span>
-       </a>
-       <ul class="nav nav-pills">
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
-          <li class="nav-item"><a href="registration.html" class="nav-link">Register</a></li>
-          <li class="nav-item"><a href="finance.html" class="nav-link active" aria-current="page">Financing</a></li>
-       </ul>
-    </header>
- </div>
- <!-- Mobile /Tablet Nav -->
- <div id="block">
-    <div class="topnav">
-       <a id="title" href="index.html" class="fs-5">Titan Community Bank</a>
-       <div id="dropDownNav">
-          <a href="index.html" class="nav-link" aria-current="page">Home</a>
-          <hr>
-          <a href="login.html" class="nav-link">Login</a>
-          <hr>
-          <a href="registration.html" class="nav-link">Register</a>
-          <hr>
-          <a href="finance.html" class="nav-link">Financing</a>
-          <hr>
-       </div>
-       <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-       <a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
-       <i class="fa fa-bars"></i>
-       </a>
-    </div>
- </div>
-        <main>
-            <h2 class="py-2 text-primary">&nbsp;Finance Application:</h2>
-            <div id="financeApp" class="text-center container-fluid py-1">
-                <form id="finance_app" action="finance.html" method="post" name="finance_app">
-                    <div class="row mt-3">
-                        <div class="col">
-                            <input id="first_Name" type="text" name="first_name" class="form-control" placeholder="First name">
-                            <span id="missing_First_Name" class="text-danger"></span>
-                        </div>
-                        <div class="col">
-                            <input id="last_Name" type="text" name="last_name" class="form-control" placeholder="Last name">
-                            <span id="missing_Last_Name" class="text-danger"></span>
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col">
-                            <input id="email" type="email" name="email" class="form-control" placeholder="Email">
-                            <span id="email_Missing" class="text-danger"></span>
-                            <span id="email_Match" class="text-danger"></span>
-                        </div>
-                        <div class="col">
-                            <input id="email_Confirm" type="email" class="form-control" placeholder="Confirm Email">
-                            <span id="email_Confirm_Missing" class="text-danger"></span>
-                            <span id="emailConfrm_Match" class="text-danger"></span>
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col">
-                            <input id="city" type="text" name="city" class="form-control" placeholder="City">
-                            <span id="missing_City" class="text-danger"></span>
-                        </div>
-                        <div class="col">
-                            <select id="state" name="state" class="form-control">
-                                <option>State</option>
-                                <option>AR</option>
-                                <option>AL</option>
-                                <option>CA</option>
-                                <option>CT</option>
-                                <option>DE</option>
-                                <option>FL</option>
-                                <option>LA</option>
-                                <option>TX</option>
-                            </select>
-                            <span id="missing_State" class="text-danger"></span>
-                        </div>
-                        <div class="col">
-                            <input id="zip_Code" type="text" name="zip_code" class="form-control" placeholder="Zip Code">
-                            <span id="missing_Zip_Code" class="text-danger"></span>
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col">
-                            <input id="gross_Income" type="text" name="gross_income" class="form-control" placeholder="12345 Gross Income">
-                            <span id="missing_Gross_Income" class="text-danger"></span>
-                        </div>
-                        <div class="col">
-                            <input id="SSN" type="text" name="social_num" class="form-control" placeholder="XXX-XX-1234 of SSN">
-                            <span id="missing_SSN" class="text-danger"></span>
-                        </div>
-                    </div>
-                    <div class="form-check mt-3">
-                        <input id="check_Agreement" class="form-check-input" type="checkbox">
-                        <span id="missing_Check" class="text-danger"></span>
-                        This prequalification request serves as my written instruction to Titan Community Bank to obtain a “soft inquiry” about my credit information, which won’t affect my credit score. I agree that TCB can send me an email
-                        confirming my request.
-                    </div>
-                    <button id="submit_form" type="button" class="btn btn-primary mt-3">Apply</button>
-                    <button id="reset_form" type="button" class="btn btn-primary mt-3">Reset</button>
-                </form>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="../public/styles.css">
+      <title>Financing</title>
+   </head>
+   <body>
+      <!--Desk Top Nav-->
+      <div id="header_navbar">
+         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 bg-light border-bottom">
+            <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+               <svg class="bi me-2" width="40" height="32"></svg>
+               <span class="fs-2">Titan Community Bank</span>
+            </a>
+            <ul class="nav nav-pills">
+               <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+               <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+               <li class="nav-item"><a href="registration.html" class="nav-link">Register</a></li>
+               <li class="nav-item"><a href="finance.html" class="nav-link active" aria-current="page">Financing</a></li>
+            </ul>
+         </header>
+      </div>
+      <!-- Mobile /Tablet Nav -->
+      <div id="block">
+         <div class="topnav">
+            <a id="title" href="index.html" class="fs-5">Titan Community Bank</a>
+            <div id="dropDownNav">
+               <a href="index.html" class="nav-link" aria-current="page">Home</a>
+               <hr>
+               <a href="login.html" class="nav-link">Login</a>
+               <hr>
+               <a href="registration.html" class="nav-link">Register</a>
+               <hr>
+               <a href="finance.html" class="nav-link">Financing</a>
+               <hr>
             </div>
-            <div id="input_Table">
-                <h2 id="review_Header" class="text-center text-danger mt-3">&nbsp;</h2>
-                <div class="row justify-content-center mt-2">
-                    <div class="col-auto">
-                        <table id="finance_App_Errors" class="table table-responsive"></table>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                    </div>
-                </div>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
+            <i class="fa fa-bars"></i>
+            </a>
+         </div>
+      </div>
+      <main>
+         <h2 class="py-2 text-primary">&nbsp;Finance Application:</h2>
+         <div id="financeApp" class="text-center container-fluid py-1">
+            <form id="finance_app" action="finance.html" method="post" name="finance_app">
+               <div class="row mt-3">
+                  <div class="col">
+                     <input id="first_Name" type="text" name="first_name" class="form-control" placeholder="First name">
+                     <span id="missing_First_Name" class="text-danger"></span>
+                  </div>
+                  <div class="col">
+                     <input id="last_Name" type="text" name="last_name" class="form-control" placeholder="Last name">
+                     <span id="missing_Last_Name" class="text-danger"></span>
+                  </div>
+               </div>
+               <div class="row mt-3">
+                  <div class="col">
+                     <input id="email" type="email" name="email" class="form-control" placeholder="Email">
+                     <span id="email_Missing" class="text-danger"></span>
+                     <span id="email_Match" class="text-danger"></span>
+                  </div>
+                  <div class="col">
+                     <input id="email_Confirm" type="email" class="form-control" placeholder="Confirm Email">
+                     <span id="email_Confirm_Missing" class="text-danger"></span>
+                     <span id="emailConfrm_Match" class="text-danger"></span>
+                  </div>
+               </div>
+               <div class="row mt-3">
+                  <div class="col">
+                     <input id="city" type="text" name="city" class="form-control" placeholder="City">
+                     <span id="missing_City" class="text-danger"></span>
+                  </div>
+                  <div class="col">
+                     <select id="state" name="state" class="form-control">
+                        <option>State</option>
+                        <option>AR</option>
+                        <option>AL</option>
+                        <option>CA</option>
+                        <option>CT</option>
+                        <option>DE</option>
+                        <option>FL</option>
+                        <option>LA</option>
+                        <option>TX</option>
+                     </select>
+                     <span id="missing_State" class="text-danger"></span>
+                  </div>
+                  <div class="col">
+                     <input id="zip_Code" type="text" name="zip_code" class="form-control" placeholder="Zip Code">
+                     <span id="missing_Zip_Code" class="text-danger"></span>
+                  </div>
+               </div>
+               <div class="row mt-3">
+                  <div class="col">
+                     <input id="gross_Income" type="text" name="gross_income" class="form-control" placeholder="12345 Gross Income">
+                     <span id="missing_Gross_Income" class="text-danger"></span>
+                  </div>
+                  <div class="col">
+                     <input id="SSN" type="text" name="social_num" class="form-control" placeholder="XXX-XX-1234 of SSN">
+                     <span id="missing_SSN" class="text-danger"></span>
+                  </div>
+               </div>
+               <div class="form-check mt-3">
+                  <input id="check_Agreement" class="form-check-input" type="checkbox">
+                  <span id="missing_Check" class="text-danger"></span>
+                  This prequalification request serves as my written instruction to Titan Community Bank to obtain a “soft inquiry” about my credit information, which won’t affect my credit score. I agree that TCB can send me an email
+                  confirming my request.
+               </div>
+               <button id="submit_form" type="button" class="btn btn-primary mt-3">Apply</button>
+               <button id="reset_form" type="button" class="btn btn-primary mt-3">Reset</button>
+            </form>
+         </div>
+         <div id="input_Table">
+            <h2 id="review_Header" class="text-center text-danger mt-3">&nbsp;</h2>
+            <div class="row justify-content-center mt-2">
+               <div class="col-auto">
+                  <table id="finance_App_Errors" class="table table-responsive"></table>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+               </div>
             </div>
-        </main>
-        <footer>
-            <nav class="navbar justify-content-center fixed-bottom border-top bg-light mt-2">
-                <p class="fs-6">&copy; 2022 Titan Community Bank</p>
-            </nav>
-        </footer>
-        <script src="../public/js/financing.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    </body>
+         </div>
+      </main>
+      <footer>
+         <nav class="navbar justify-content-center fixed-bottom border-top bg-light mt-2">
+            <p class="fs-6">&copy; 2022 Titan Community Bank</p>
+         </nav>
+      </footer>
+      <script src="../public/js/financing.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+   </body>
 </html>
+
