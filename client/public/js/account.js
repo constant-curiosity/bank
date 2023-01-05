@@ -50,17 +50,15 @@ window.onload = () => {
   );
   fetchTransactions
     .then((res) => res.json())
-    .then((data) => fillAccountTable(data))
-    .catch((error) => {
-      console.log(`Error Message: ${error.message}`);
-    });
-  const fetchTransactionsAgain = fetch(
-    "/auth/transactionsfetch"
-  );
-  fetchTransactionsAgain
-    .then((res) => res.json())
-    .then((data) => calulateBalance(data))
+    .then((data) => {
+      calulateBalance(data)
+      fillAccountTable(data)
+    })
     .catch((error) => {
       console.log(`Error Message: ${error.message}`);
     });
 };
+
+
+
+
