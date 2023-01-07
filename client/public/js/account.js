@@ -26,7 +26,6 @@ const calulateBalance = (transactions) => {
       totalCredit += amount;
     } else {
       totalDebit += amount;
-      console.log(totalDebit);
     }
   }
 
