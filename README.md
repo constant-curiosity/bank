@@ -14,7 +14,7 @@ Explore the app without any setup! Check out the [Live Demo](https://community-b
 - **Deployment:** The app is deployed using Heroku.
 
 ### **Contact**
-If you have any questions or feedback, feel free to reach out to us at ferrell@duckandtiger.dev.
+If you have any questions or feedback, feel free to reach out to us at contact@duckandtiger.dev.
 
 ### **Usage Instructions**
 
@@ -44,4 +44,4 @@ To get started with The Bank, follow these simple steps to explore and simulate 
 
 Please note that The Bank is a mock banking app designed for educational purposes. No real financial transactions are involved, and all data used within the app is for demonstration purposes only.
 
-Feel free to explore different features and interactions within The Bank. We value your feedback and questions, so don't hesitate to reach out to us at ferrell@duckandtiger.dev.
+Feel free to explore different features and interactions within The Bank. We value your feedback and questions, so don't hesitate to reach out to us at contact@duckandtiger.dev.
