@@ -14,7 +14,7 @@ Explore the app without any setup! Check out the [Live Demo](https://community-b
 - **Deployment:** The app is deployed using Heroku.
 
 ### **Contact**
-If you have any questions or feedback, feel free to reach out to us at bob@gmail.com.
+If you have any questions or feedback, feel free to reach out to us at ferrell@duckandtiger.dev.
 
 ### **Usage Instructions**
 
